@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const load = async () => {
       try {
-        const res = await fetch("http://teste/");
+        const res = await fetch("https://api-exemple-production.up.railway.app/health");
         if (!res.ok) throw new Error();
         const contentType = res.headers.get("content-type") ?? "";
         if (contentType.includes("application/json")) {
